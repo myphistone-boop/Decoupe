@@ -6,6 +6,14 @@ import subprocess
 import sys
 import os
 
+try:
+    from imageio_ffmpeg import get_ffmpeg_exe
+    FFMPEG_PATH = get_ffmpeg_exe()
+except ImportError:
+    print("❌ Erreur: imageio-ffmpeg n'est pas installé")
+    print("Installez-le avec: pip install -r requirements.txt")
+    sys.exit(1)
+
 
 def format_timestamp(seconds):
     """Convertit les secondes en format HH:MM:SS"""
@@ -64,7 +72,7 @@ def extract_video(input_path, start_time, end_time, output_path="output.mp4"):
     # -vf scale=-2:720: redimensionner à 720p (optionnel)
 
     cmd = [
-        'ffmpeg',
+        FFMPEG_PATH,
         '-ss', start,
         '-to', end,
         '-i', input_path,
@@ -93,9 +101,8 @@ def extract_video(input_path, start_time, end_time, output_path="output.mp4"):
         print(f"\n❌ Erreur lors de l'extraction:")
         print(e.stderr)
         return False
-    except FileNotFoundError:
-        print("\n❌ Erreur: ffmpeg n'est pas installé")
-        print("Installez-le avec: sudo apt-get install ffmpeg (Linux) ou brew install ffmpeg (Mac)")
+    except Exception as e:
+        print(f"\n❌ Erreur inattendue: {e}")
         return False
 
 

@@ -5,7 +5,8 @@ Script Python simple pour extraire une section d'une vidéo et l'optimiser pour 
 ## 📋 Prérequis
 
 - Python 3.7+
-- ffmpeg
+
+**C'est tout !** ffmpeg est inclus automatiquement via pip.
 
 ## 🔧 Installation
 
@@ -22,37 +23,13 @@ chmod +x setup.sh
 ./setup.sh
 ```
 
-Ces scripts créent automatiquement l'environnement virtuel et installent les dépendances.
+Ces scripts créent automatiquement l'environnement virtuel et installent les dépendances (incluant ffmpeg).
 
 ---
 
 ### Installation manuelle
 
-### 1. Installer ffmpeg
-
-**Linux (Ubuntu/Debian):**
-```bash
-sudo apt-get update
-sudo apt-get install ffmpeg
-```
-
-**macOS:**
-```bash
-brew install ffmpeg
-```
-
-**Windows:**
-
-Option 1 - Avec Chocolatey (recommandé):
-```powershell
-choco install ffmpeg
-```
-
-Option 2 - Manuel:
-- Téléchargez depuis https://www.gyan.dev/ffmpeg/builds/
-- Extrayez et ajoutez au PATH
-
-### 2. Créer un environnement virtuel
+### 1. Créer un environnement virtuel
 
 **Linux/macOS:**
 ```bash

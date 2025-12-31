@@ -25,18 +25,6 @@ if %errorlevel% neq 0 (
     exit /b 1
 )
 
-REM Vérifier si ffmpeg est disponible
-ffmpeg -version >nul 2>&1
-if %errorlevel% neq 0 (
-    echo [ATTENTION] ffmpeg n'est pas installe ou n'est pas dans le PATH
-    echo.
-    echo Installez ffmpeg avec chocolatey: choco install ffmpeg
-    echo Ou telechargez depuis: https://www.gyan.dev/ffmpeg/builds/
-    echo.
-    pause
-    exit /b 1
-)
-
 REM Lancer le script Python
 python extract_video.py
 

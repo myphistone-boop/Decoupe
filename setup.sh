@@ -42,8 +42,7 @@ echo "============================================================"
 echo "    Configuration terminée avec succès !"
 echo "============================================================"
 echo
-echo "Prochaines étapes:"
-echo "  1. Installez ffmpeg (voir README.md)"
-echo "  2. Activez l'environnement: source venv/bin/activate"
-echo "  3. Lancez: python3 extract_video.py"
+echo "Tout est prêt !"
+echo "  1. Activez l'environnement: source venv/bin/activate"
+echo "  2. Lancez: python3 extract_video.py"
 echo

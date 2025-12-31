@@ -1,7 +1,4 @@
 # Dépendances Python pour l'extraction de vidéo
 
-# Note: Ce projet utilise uniquement la bibliothèque standard Python
-# Aucune dépendance pip n'est nécessaire
-
-# Dépendance système requise:
-# - ffmpeg (doit être installé séparément sur le système)
+# imageio-ffmpeg: Inclut les binaires ffmpeg (pas besoin d'installation système)
+imageio-ffmpeg>=0.4.9

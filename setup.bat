@@ -47,8 +47,6 @@ echo ============================================================
 echo     Configuration terminee avec succes !
 echo ============================================================
 echo.
-echo Prochaines etapes:
-echo   1. Installez ffmpeg (voir README.md)
-echo   2. Lancez: extract_video.bat
+echo Tout est pret ! Lancez: extract_video.bat
 echo.
 pause
