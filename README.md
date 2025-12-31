@@ -4,10 +4,31 @@ Script Python simple pour extraire une section d'une vidéo et l'optimiser pour 
 
 ## 📋 Prérequis
 
-- Python 3
+- Python 3.7+
 - ffmpeg
 
-### Installation de ffmpeg
+## 🔧 Installation
+
+### Installation rapide (recommandé)
+
+**Windows:**
+```cmd
+setup.bat
+```
+
+**Linux/macOS:**
+```bash
+chmod +x setup.sh
+./setup.sh
+```
+
+Ces scripts créent automatiquement l'environnement virtuel et installent les dépendances.
+
+---
+
+### Installation manuelle
+
+### 1. Installer ffmpeg
 
 **Linux (Ubuntu/Debian):**
 ```bash
@@ -21,12 +42,59 @@ brew install ffmpeg
 ```
 
 **Windows:**
-Téléchargez depuis https://ffmpeg.org/download.html
+
+Option 1 - Avec Chocolatey (recommandé):
+```powershell
+choco install ffmpeg
+```
+
+Option 2 - Manuel:
+- Téléchargez depuis https://www.gyan.dev/ffmpeg/builds/
+- Extrayez et ajoutez au PATH
+
+### 2. Créer un environnement virtuel
+
+**Linux/macOS:**
+```bash
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
+
+**Windows (PowerShell):**
+```powershell
+python -m venv venv
+.\venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+```
+
+**Windows (CMD):**
+```cmd
+python -m venv venv
+venv\Scripts\activate.bat
+pip install -r requirements.txt
+```
+
+> **Note:** Si vous avez une erreur d'exécution de scripts sur Windows, exécutez:
+> ```powershell
+> Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+> ```
 
 ## 🚀 Utilisation
 
+**Linux/macOS:**
 ```bash
 python3 extract_video.py
+```
+
+**Windows:**
+```powershell
+python extract_video.py
+```
+
+Ou utilisez le script batch fourni:
+```cmd
+extract_video.bat
 ```
 
 Le script vous demandera :
