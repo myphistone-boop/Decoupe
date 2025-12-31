@@ -113,6 +113,8 @@ def main():
 
     # Demander le chemin de la vidéo
     video_path = input("\n📁 Chemin vers la vidéo: ").strip()
+    # Enlever les guillemets si présents (ex: "C:\path" ou 'C:\path')
+    video_path = video_path.strip('"').strip("'")
 
     # Demander les timestamps
     print("\n⏱️  Timestamps (format: secondes ou HH:MM:SS)")
